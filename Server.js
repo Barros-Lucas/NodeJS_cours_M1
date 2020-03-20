@@ -23,19 +23,6 @@ if(fileName!=undefined){
                 users.push(UserVilleSplit);
             })
             dataUserVille.users = users;
-            // const dataUserVille = {
-            //     "users":[
-            //         {
-            //             "id":"User1",
-            //             "ville":"toulouse"
-            //         },
-            //         {
-            //             "id":"User2",
-            //             "ville":"toulouse"
-            //         },
-            //     ]
-
-            // }
 
             const server = http.createServer((req, res) =>{
 
