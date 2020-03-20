@@ -16,17 +16,21 @@ if(fileName!=undefined){
             const dataUserVille = {};
             var users = [];
             resultSplit.forEach(function (elt){
-                var UserVilleSplit = {};
-                var resultSplitUsers = elt.split(";")
-                UserVilleSplit.id = resultSplitUsers[0];
-                UserVilleSplit.ville = resultSplitUsers[1];
-                users.push(UserVilleSplit);
+                if(elt!=""){
+                    var UserVilleSplit = {};
+                    var resultSplitUsers = elt.split(";")
+                    UserVilleSplit.id = resultSplitUsers[0];
+                    UserVilleSplit.ville = resultSplitUsers[1];
+                    users.push(UserVilleSplit);
+                }
+
             })
             dataUserVille.users = users;
 
             const server = http.createServer((req, res) =>{
 
                 const generatedTemplate = compiledFunction({
+                    fileName, fileName,
                     dataP: dataUserVille
                 });
 
