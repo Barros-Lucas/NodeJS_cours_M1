@@ -1,0 +1,19 @@
+doctype html  
+html(lang='en')  
+ head
+   title MiniTp ServerWeb
+ body
+   h5 Pug Examples
+   div.container
+     table.table 
+      tr
+        th Identifiant
+        th Ville
+      tbody
+        each val in dataP.users
+          tr
+            //- td #{val.ident}
+            //- td #{val.ville}
+            td #{val.id}
+            td #{val.ville}
+
